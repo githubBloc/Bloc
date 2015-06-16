@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* CSS Document */
+#MainContent { margin:0;padding:30px 59px 30px 64px;}
+
+#BizInfo{width:34.6%; height:325px; border:1px solid #b7b8b8; margin:0px; padding:25px;background-color:#F6F7F9; text-align:center; float:left;}
+#Logo {border:1px solid #b7b8b8; margin-left:36%; height:76px; width:88px; background-image:url(../Images/NoLogo.png);}
+#Logo img {width:100%;height:100%;}
+#BizInfo h1{ padding:0px; font-size:17px; color:#565656; text-transform:uppercase;font-family:"Gotham Rounded Medium";}
+#BizInfo h2{color:#565656; font-family:"Gotham Rounded Book";font-size:14px; line-height:22px; margin:10px 0px 0px 0px;}
+#Address { color:#565656; font-family:"Gotham Rounded Book"; font-size:14px; line-height:22px}
+#BizInfo a{color:#00bbb5; font-size:10px; font-family:"Gotham Rounded Medium"; text-transform:uppercase; text-decoration:none;}
+#SocialLinks{ list-style-type:none; border-top:1px solid #b7b8b8; padding:20px 0px 0px 0px; text-align:center;margin:20px 0px 0px 0px;}
+#SocialLinks li{display:inline-block; margin-right:10px;}
+
+/*Gallery pictures*/
+
+#carousel {border:1px solid #b7b8b8; margin-left:40%; height:375px;overflow:hidden;}
+#Stack { height:375px;overflow:hidden;}
+#carousel img{height:100%;width:100%;}
+#carousel:hover > span {display:block;}
+
+.PreNext{position:absolute;width:32px;height:32px; background-image:url(../Images/LeftArrow.png); opacity:0.5; display:none; z-index:2; cursor:pointer;}
+#LeftArrow { background-image:url(../Images/LeftArrow.png); }
+#RightArrow { background-image:url(../Images/RightArrow.png);}
+#LeftArrow2 { background-image:url(../Images/LeftArrow.png); }
+#RightArrow2 { background-image:url(../Images/RightArrow.png);}
+#LeftArrow:hover {opacity:1;}
+#RightArrow:hover {opacity:1;}
+#LeftArrow2:hover {opacity:1;}
+#RightArrow2:hover {opacity:1;}
+
+	
+#GalPicRow {height:152px; margin-bottom:25px; overflow:hidden;}
+#GalPicRow:hover > span{display:block;}
+#GalPicRow ul li{border:1px solid #b7b8b8; width:196.3px; height:152px; margin:0px -5px 0px 0px;padding:0px;float:left; list-style:none}
+#GalPicRow ul {margin:0px; height:152px; padding:0px;}
+#GalPicRow img{width:100%; height:100%;}
+
+
+#BizContent {border:1px solid #b7b8b8; width:528px; height:771px;float:left; padding: 0px 25px 25px 25px; background-color:#F6f7f9;}
+#BizDetails h1{margin:0px; color:#565656; font-family:"Gotham Rounded Medium"; font-size:16px;}
+#BizDetails h2 {font-family:"Gotham Rounded Bold"; color:#565656; font-size:14px;float:left; margin:0px;}
+#BizDetails h3 {font-family:"Gotham Rounded Book"; color:#565656; line-height:20px; font-size:13px; margin:0px;}
+#Table td {padding:15px 20px 0px 0px;}
+
+#Menue {padding:25px 0px;margin:25px 0px; border-bottom:1px solid #b7b8b8; border-top:1px solid #b7b8b8;}
+#Table2 td {padding:15px 0px 0px 0px;width:300px; text-align:right;}
+#Menue h1{margin:0px; color:#565656; font-family:"Gotham Rounded Medium"; font-size:16px;}
+#Menue h2 {font-family:"Gotham Rounded Bold"; color:#565656; font-size:14px;float:left; margin:0px;cursor:pointer;}
+#Menue h3 {font-family:"Gotham Rounded Book"; color:#565656; line-height:20px; font-size:13px; margin:0px;}
+#Menue a {color:#00bbb5;}
+#Table2 tr:hover h3{color:#e74c3c;}
+
+#About h1{color:#565656; font-family:"Gotham Rounded Medium"; font-size:16px;}
+#About h4{font-family:"Gotham Rounded Book"; color:#565656; line-height:20px; font-size:13px;margin:0px; text-align:justify;}
+
+
+#Map {border:1px solid #b7b8b8; margin-left:60%; height:370px;}
+
+
+#MoreBizInfo {border:1px solid #b7b8b8;margin-left:60%; height:374px; background-color:#f6f7f9;padding:25px;}
+#MoreBizInfo  h1{color:#565656; font-family:"Gotham Rounded Medium"; font-size:16px; margin-top:0px;}
+#MoreBizInfo h3{color:#565656; font-family:"Gotham Rounded Book";font-size:13px; line-height:12px;}
+#MoreBizInfo strong{ font-family:"Gotham Rounded Bold";}

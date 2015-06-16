@@ -1,0 +1,461 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face
+{
+	font-family: "Gotham Rounded Bold";
+	src: url(../Font/GothamRounded-Bold.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Book";
+	src:url(../Font/GothamRounded-Book.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Bold Italic";
+	src:url(../Font/GothamRounded-BoldItalic.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Book Italic";
+	src:url(../Font/GothamRounded-BookItalic.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Light";
+	src:url(../Font/GothamRounded-Light.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Light Italic";
+	src:url(../Font/GothamRounded-LightItalic.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Medium";
+	src:url(../Font/GothamRounded-Medium.woff);
+}
+@font-face
+{
+	font-family: "Gotham Rounded Medium Italic";
+	src:url(../Font/GothamRounded-MediumItalic.woff);
+}
+body
+{
+	margin:0px;
+	padding:0px;
+}
+
+#wrapper
+{
+	max-width:1100px;
+	min-width:840px;
+	width:1088px;
+	margin:0px auto 2px auto;
+}
+
+#header 
+{
+	height:65px;
+	margin:0 auto 0 auto;
+	padding: 40px 63px;
+}
+p {color:#565656;font-family:"Gotham Rounded Book";font-size:11px;text-transform:uppercase;margin:5px 0px;}
+a {text-align:center; text-decoration:none; font-family:"Gotham Rounded Medium";font-size:12px;}
+#User_Header {padding:10px 63px; background-color:#e7ebec; margin-top:5px; border: 1px solid #b7b8b8}
+#User_Header ul{ list-style-type:none; margin:0px;padding:0px;}
+#User_Header li {display:inline-block;margin:0px 25px 0px 0px;color:#565656;font-family:"Gotham Rounded Book";font-size:11px;text-transform:uppercase;}
+#User_Header a {text-decoration:none;color:#F66;margin:0px;padding:0px;}
+#User_Header p{color:#333; margin-top:5px; float:left;}
+#Content {margin:30px 63px 30px 63px; min-height:500px;}
+	#Logo_pic
+    {
+        width:167px;
+        height:50px;
+		float:left;
+		position:absolute;
+    }
+	
+	#Sign_Register
+	{	
+		position:absolute;
+		text-align:left;
+		margin:12px 0px 0px 680px;
+		padding:0px;
+	}
+	
+	.Register_links
+		{
+			list-style-type:none;
+			display:inline;
+			padding:0px;
+			margin-right:15px
+		}
+
+    #Sign_Register a
+    {
+		text-transform:uppercase;
+		font-family: "Gotham Rounded Book";
+		font-size:10pt;
+        color:#565656;
+		text-decoration:none;
+		position:relative;
+		padding:3px;
+		margin:0px;
+		}
+	#Sign_Register ul > li:hover a {color:#e74c3c; background-color:#e7ebec; border-top:1px solid #00bbb5; border-left:1px solid #00bbb5; border-right:1px solid #00bbb5;}
+	#Sign_In {padding:15px; margin-top:-1.5px; background-color:#e7ebec; position:absolute; z-index:1000;display:none;}
+	#Sign_In p, input, span {margin:0px;padding:0px;font-family:"Gotham Rounded Book"; font-size:13px; color:#565656;}
+	#Sign_In input {height:16px;}
+	#Sign_In span{display:none;}
+	#Sign_In2 span{display:none;}
+	#Sign_Register li:hover #Sign_In{display:block;border-bottom:1px solid #00bbb5; border-left:1px solid #00bbb5; border-right:1px solid #00bbb5; }
+	#Sign_In h6 a { font-size:8px; text-decoration:underline;}
+	#Sign_In h6 {margin:3px 0px 0px 0px;padding:0px;}
+	#Forgot_Password_Div{margin-top:10px; border-top:1px solid #333;padding-top:10px;display:none;}
+	#Forgot_Password_Div2{margin-top:10px; border-top:1px solid #333;padding-top:10px;display:none;}
+		
+/* Languages*/
+		#Languages
+		{
+			position:absolute;
+			margin-left:848px;
+			text-align:left;
+			width: 110px;
+			height:36px;
+			border: 1px solid #e74c3c;
+		}
+		#ENG {
+			background-color:#e74c3c;
+			float: left;
+			padding: 10px 13px;
+
+		}
+		#ENG a {color: #fff;}
+		#RUS a {color: #e74c3c;}
+		#RUS {
+			padding: 10px 13px;
+			position: absolute;
+			right: 0px;
+		}
+		#Languages a
+		{
+			font-family: "Gotham Rounded Book";
+			font-size:10pt;
+			text-decoration:none;
+			position:relative;
+		}
+
+/* Navigation Menu*/
+		#Navi_Menu 
+		{		
+		position:absolute;
+		margin-left:257px;
+		margin-top:38px;
+		padding:0;
+		}
+
+		#Navi_Menu ul 
+		{
+			list-style-type:none;
+			position:relative;
+			display:inline-table;
+			margin:0px;
+			
+		}
+		#Navi_Menu ul li {
+			float:left;
+			
+		}
+		#Navi_Menu ul li a
+		{
+			display:block;
+			text-decoration:none;
+			color:#565656;
+			font-family:"Gotham Rounded Medium";
+			font-size:14px;
+			padding:14.5px 15px;
+		}
+		#Navi_Menu ul > li:hover > a, #Navigation_Block ul > li:hover > a {
+			color:#e74c3c;
+			cursor: pointer;
+		}
+/*ABOUT US Picture*/
+		#Offer_Page_Picture {
+			width: 100%;
+			height: 430px;
+		}
+		#Offer_Page_Picture img {
+			width: 100%;
+			height: 100%;
+		}		
+
+
+/*Signs*/
+		#Signes{
+			width:1088px;
+			height: 130px;
+			padding:55px 0 55px 0;
+			background-color:#28ADA6;
+		}
+		#First_sign
+		{
+			font-family:"Gotham Rounded Medium";
+			font-size:33pt;
+			color:#FFF;
+			text-transform:uppercase;
+			text-align:center;
+			margin-bottom:0;
+		}
+		#Second_sign
+		{
+			font-family:"Gotham Rounded Book";
+			font-size:21pt;
+			color:#FFF;
+			text-transform:uppercase;
+			text-align:center;
+			margin-top:7px;
+		}
+		.line_seperator {
+			height: 1px;
+			border-bottom: 2px solid #ffffff;
+			width:450px;
+			margin: 15px auto 18px auto;
+		}
+/*How it works*/
+		#How_It_Works {
+			text-align: center;
+			padding: 35px 60px;
+		}
+		.How_It_Work_Item {
+			float: left;
+		}
+		#How_It_Works h1 {
+			color: #565656;
+			font-family: "Gotham Rounded Book";
+		}
+		#How_It_Works h2 {
+			font-family: "Gotham Rounded Book";
+			color: #868686;
+			font-size: 20px;
+		}
+		#How_It_Works h3 {
+			font-size: 18px;
+			color: #565656;
+			font-family: "Gotham Rounded Medium";
+			text-transform: none;
+		}
+		#How_It_Works p {
+			margin-top: 20px;
+  			line-height: 27px;
+			font-size: 19px;
+			color: #868686;
+			font-family: "Gotham Rounded Book";
+			text-transform: none;
+		}
+/*Offer Cards block*/
+
+		#Offer_Cards{
+			padding: 35px 60px;
+			text-align: center;
+			background-color: #ECECEC;
+			}
+		.Flex {
+			display: flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+			margin-top: 30px;
+		}
+		#Offer_Cards h1 {color: #565656; font-family: "Gotham Rounded Medium";}
+		#Offer_Cards p {
+			color: #666;
+			font-family: "Gotham Rounded Book";
+			text-transform: none;
+  			font-size: 18px;
+		}
+
+		.Card {
+			border: 1px solid #999;
+			text-align: center;
+			float: left;
+			position: relative;
+			-webkit-flex: 1;
+    		-ms-flex: 1; 
+    		flex-grow:1;
+		}
+		.Card h2 {
+			font-size: 22px;
+			color: #565656;
+			font-family: "Gotham Rounded Book";
+			text-transform: none;
+		}
+		.Card .Price {
+			background-color: #28ADA6;
+			text-align: center; 
+			border-top: 1px solid #999;
+			border-bottom: 1px solid #999;
+			padding: 30px 0px;
+		}
+		#Offer_Cards div.Price p {
+			color: #fff;
+			font-size: 20px;
+			font-family: "Gotham Rounded Book";
+			text-transform: none;
+		}
+		#Offer_Cards div.Price span {
+			font-size: 43px;
+			font-family: "Gotham Rounded Book";
+			color: #fff;
+		}
+
+		.Includes {
+			  border: 1px solid #999;
+			  width: 100px;
+			  margin: -15px auto 0px auto;
+			  padding: 7px 15px;
+			  border-radius: 20px;
+			  background-color: #fff;
+		}
+		#Offer_Cards div.Includes p {
+			  font-size: 14px;
+			  margin: 0px;
+			  color: #454;
+			  font-family: "Gotham Rounded Medium";
+			  height: 14px;
+		}
+
+		.Card ul {list-style-type: none; margin-bottom: 111px;padding:0px;}
+		.Card li {
+			text-align: center;
+			font-family: "Gotham Rounded Book";
+			font-size: 16px;
+			line-height: 24px;
+			color: #666;
+		}
+
+		#Offer_Cards .Footer {
+			background-color: #e74c3c;
+			padding: 20px 30px;
+			position: absolute;
+  			bottom: 0px;
+ 			width: 79.5%;
+		}
+		#Offer_Cards .Footer .Card_Button {
+			padding: 5px;
+			border: 1px solid #fff;
+			background-color: #e74c3c;
+			text-align: center;
+		}
+		#Offer_Cards .Footer .Card_Button p {
+			color: #fff;
+			font-size: 16px;
+			font-family: "Gotham Rounded Book";
+			}
+		#Offer_Cards .Footer a:hover div.Card_Button{background-color: #fff;}
+		#Offer_Cards .Footer a:hover div.Card_Button p {color: #e74c3c;}
+
+
+
+/*What set us apart block*/
+
+		#What_Sets_Us {
+			text-align: center;
+			padding: 35px 60px;
+		}
+		.What_Sets_Us_Item {
+			float: left;
+		}
+		#What_Sets_Us h1 {
+			color: #565656;
+			font-family: "Gotham Rounded Book";
+		}
+		#What_Sets_Us h2 {
+			font-family: "Gotham Rounded Book";
+			color: #868686;
+			font-size: 20px;
+			margin-bottom: 0px;
+		}
+		#What_Sets_Us h3 {
+			font-size: 18px;
+			margin-top: 5px;
+			color: #565656;
+			font-family: "Gotham Rounded Medium";
+			text-transform: none;
+		}
+		#What_Sets_Us p {
+			margin-top: 20px;
+  			line-height: 27px;
+			font-size: 19px;
+			color: #868686;
+			font-family: "Gotham Rounded Book";
+			text-transform: none;
+		}
+
+/*Footer*/
+		#Footer
+		{
+			height:320px;
+			background-color:#868686;
+			color:#e7eced;
+			padding: 35px 60px 35px 60px;
+		}
+		#Footer h4 {
+			font-family: "Gotham Rounded Medium";
+		}
+		#Footer ul {
+			list-style: none;
+			float: left;
+			margin: 0px;
+			padding: 0px;
+			width: 182px;
+		}
+		#Footer li {
+			font-size: 16px;
+			font-family: "Gotham Rounded Book";
+			line-height: 22px;
+		}
+		#Footer li:hover {
+			color: #2abab5;
+			cursor: pointer;
+		}
+
+		
+/*Copyright*/
+		#Copyright
+		{	padding:12px 63px 0px 63px;
+			border:1px solid #CCC;
+			background-color:#e7eceb;
+			color:#565656;
+			height:28px;
+		}
+		#Copyright ul
+		{	margin:0;
+			text-align:right;
+			
+		}
+		#Copyright li 
+		{
+			display:inline-block;
+			text-decoration:none;
+			list-style-type:none;
+		}
+		#Copyright p
+		{
+			font-family:"Gotham Rounded Medium";
+			font-size:10pt;
+			color:#565656;
+			margin:0;
+			padding:0;
+			float:left;
+			text-transform:uppercase;
+		}
+		#Copyright a
+		{	font-family:"Gotham Rounded Medium";
+			font-size:10pt;
+			color:#565656;
+			text-transform:uppercase;
+			text-decoration:none;
+		}
+		
+		
+			

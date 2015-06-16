@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+#wrapper {width:1088px; margin:0px auto; border:1px dashed #999;}
+#header {border:1px solid #CCC; padding:10px 20px;}
+#header a {text-align:right; text-decoration:none; color:#e74c3c;}
+#header p {text-align:left; float:left; margin:0px 50px 0px 0px; color:#666;}
+#Left_Sidebar {width:200px; margin-top:25px; border:1px solid #999; float:left;}
+#Left_Sidebar li { list-style-type:none; margin:10px;}
+#Left_Sidebar a { text-decoration:none; color:#6CF;}
+#Left_Sidebar a:hover {color:#e74c3c;}
+
+#Content {padding:25px; overflow:scroll; width:800px; float:right; margin-top:25px;}
+
+.List {border:1px solid #999; background-color:#F6F7F9;color:#333; font-family:Verdana, Geneva, sans-serif;padding:15px;margin-bottom:15px;}
+.List h4, h5{margin:0px;}
+#Content a{text-decoration:none;}
+
+th{text-align:left;}
+td{padding-right:250px;}
+table.Claim tr:nth-child(even) {background-color: #CCC; font-weight:bold;}

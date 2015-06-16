@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* Search CSS Document */
+#Main_Content { margin:0;padding:30px 59px 30px 64px; min-height:500px; position:relative;}
+/*Sort*/
+
+#Sort {background-color:#00bbb5; border:1px solid #01aaa5; margin:0;padding:10px 10px 7px 15px; width:56.3%; border:1px solid #01aaa5;float:left;}
+#Sort p {font-family:"Gotham Rounded Book"; font-size:12px; color:#fff;margin:2px 0px 0px 0px; padding:0px; float:left;}
+#Sort_Drop_Down select{ width: 150px;font-family:"Gotham Rounded Medium"; font-size:14px; color:#fff; background:transparent; padding-top:0; margin:0px 0px 0px 4px; border:0; -webkit-appearance:none; cursor:pointer;}
+#Sort_Drop_Down { width:130px; overflow:hidden; background:url(../Images/Sort_Search.png) no-repeat right;}
+
+/*Results Boxes*/
+.Result_Box {border:1px solid #b7b8b8; margin:10px 0px 0px 0px; padding:15px;background-color:#F6F7F9;float:left; width:538px; position:relative;}
+#Logo {border:1px solid #b7b8b8; float:left;margin:0px 15px 15px 0px; height:76px; width:88px; background-image:url(../Images/NoLogo.png);}
+#Logo img {width:100%;height:100%;}
+.Result_Box h1 {margin:0px; padding:0px; font-family:"Gotham Rounded Medium"; font-size:15px;color:#00bbb5;}
+.Result_Box h2 {margin:10px 0px 10px 0px; padding:0px; font-family:"Gotham Rounded Book";font-size:14px;color:#565656; line-height:1.5;}
+.Result_Box ul {display:inline-block;margin:0; padding:0; list-style-type:none;}
+.Result_Box ul li {float:left;margin-right:5px;}
+.Result_Box ul li a {text-decoration:none; font-family:"Gotham Rounded Book"; font-size:13px; color:#565656;}
+#Results {margin:0;padding:0;width:55.83%;}
+#Map {width:350px; height:380px; border:1px solid #b7b8b8; margin-left:610px; padding:1px;position:absolute;}
+
+
+
+/* Search bar scrolling */
+#Search_Fields2 { padding:14px 0px 12px 60px; z-index:999; width:1026px; position:relative; margin-top:0px; top:0px;}
+#Search_Fields2 ul > li:hover a {color:#e74c3c;}
+#test {color:#E9E5DA;}

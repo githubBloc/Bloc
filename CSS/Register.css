@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* Infographic */
+
+#Content {margin:30px 340px 30px 63px; border-right:1px solid #b7b8b8; min-height:600px;}
+
+#InfoGraphic {text-align:center;}
+
+#Login_Exist {float:right; margin:10px 63px 10px 0px; }
+#Login_Exist h3 {color:#565656;font-family:"Gotham Rounded Book";font-size:13px;text-transform:uppercase;margin:18px 0px 10px 0px;}
+#Login_Exist p {color:#565656;font-family:"Gotham Rounded Book";font-size:11px;text-transform:uppercase;margin:5px 0px;}
+#Login_Exist input:last-child {margin-top:5px;}
+
+#RegisterButton {width:100px;height:15px;background-color:#e74c3c;color:#fff;margin:15px auto 15px auto; padding:5px;}
+ #Content a {text-align:center; text-decoration:none; color:#fff; font-family:"Gotham Rounded Medium";font-size:12px;}
+ #Content h3 {color:#565656;font-family:"Gotham Rounded Book";font-size:18pt;text-transform:uppercase;margin:0;}
+ #Content h4 {color:#565656;font-family:"Gotham Rounded Book";font-size:16px;text-transform:uppercase;}
+ 
+ 
