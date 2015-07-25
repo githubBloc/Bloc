@@ -49,7 +49,7 @@ include("Blocks/Header.php");
 				<h3>VISIBILITY</h3>
 			</div>
 				
-				<div class="How_It_Work_Item" style="margin-right: 105px;">
+				<div class="How_It_Work_Item" style="margin-right: 103px;">
 					<img src="Images/Get_More_Business.png" />
 					<h2>GET MORE</h2>
 					<h3>BUSINESS</h3>
