@@ -12,7 +12,9 @@ $Password = $_POST['Password'];
 	$Password = stripslashes($Password); $Password = htmlspecialchars($Password); $Password = trim($Password);
 	
 	$Salt = '$2y$11$' . substr(md5($Email), 0, 22); 	
+	//Salt $2y$11$94cccd3e1b8b32a2ace1da
 	$HashPassword = crypt($Password,$Salt);
+	//$2y$11$94cccd3e1b8b32a2ace1dOYgxA7LzAkkchl/CQr4aJjzDMuiNbQpO
 	
 	 include ("../DB/bd.php");
 

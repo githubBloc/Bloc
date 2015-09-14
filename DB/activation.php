@@ -20,7 +20,7 @@ if    (isset($_GET['code'])) {$code =$_GET['code']; }
 		$myrow1 = mysql_fetch_array($results1);
 		
 		$Kill_Link = $myrow1['Activation'];
-		if($Kill_Link=='1'){exit("You did confirm you Registration already");}
+		if($Kill_Link=='1'){exit("You did confirm your Registration already");}
 		$activation = md5($myrow1['id']).md5($Email);
 	
  if ($activation == $code) {
