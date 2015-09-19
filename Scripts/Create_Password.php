@@ -1,15 +1,20 @@
 <?php	
-$Email =  $_POST['Email'];  
-$Password = $_POST['Password'];
+$Email =  trim($_POST['Email']);  
+$Password = trim($_POST['password']);
  
-   $Password = stripslashes($Password); $Password = htmlspecialchars($Password); $Password = trim($Password);
+$Password = stripslashes($Password); $Password = htmlspecialchars($Password); $Password = trim($Password);
 	
-	$Salt = '$2y$11$' . substr(md5($Email), 0, 22); 	
-	$HashPassword = crypt($Password,$Salt);
+$Salt = '$2y$11$' . substr(md5($Email), 0, 22); 	
+$HashPassword = crypt($Password,$Salt);
 
-$db = mysql_connect ("localhost","Eugene","12345");
-mysql_select_db ("Bloc",$db);
+require_once("../DB/DB_connections.php"); 
+$bdd = new DB_connections($localhost, 'Bloc', 'root', 'root');
 
-    $results = mysql_query("UPDATE users SET Password='$HashPassword' WHERE Email='$Email'")or die(mysql_error());
-	
+$sql = "UPDATE `users`   
+   		SET `Password` = :Password
+ 		WHERE `Email` = :Email";
+
+$bdd->execute($sql, $Email, $HashPassword);
+echo $bdd;
+
 ?>	

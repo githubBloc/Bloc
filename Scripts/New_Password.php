@@ -9,7 +9,8 @@ $Email = $_GET['Email'];
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 <style type="text/css">
-#Block{border:1px solid #999; margin:auto auto; width:225px; padding:25px;}
+	#Block{ border:1px solid #999; margin:auto auto; width:225px; padding:25px; }
+	#Warning { color:red;}
 </style>
 
 	<script type="application/javascript">
@@ -17,41 +18,42 @@ $Email = $_GET['Email'];
  		$(document).ready(function (e){
 			
 			$('#Submit').click(function (e) {
-			var Password = $('#Password').val();
-			var Password2 = $('#Password2').val();
-			var Email = $('#Email').text();
-	
-			var reg_exp = /^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-			  
-			if(!reg_exp.test(Password))
-				{
-					$('#Warning').html("<p id='red_msg'>Password must be between 7 to 15 characters which contain at least one numeric digit and a special character.</p>");
-					return false;
-					
-				}			
-			if(Password!=Password2)
-			{ $('#Warning').html("<p id='red_msg'>Please type the same password in second field</p>");
-					return false; }
-			
 			e.preventDefault();
+			var password = $('#Password').val().trim();
+			var Password2 = $('#Password2').val().trim();
+			var Email = $('#Email').text().trim();
+	
+			var reg_exp = /^^(?=.*[0-9])(?=.*[!@#$%^&*\-\(\)\[\]\{\}+_=])[a-zA-Z0-9!@#$%^&*\-\(\)\[\]\{\}+_=]{7,15}$/;
+			 
+			 
+				if(!reg_exp.test(password)){
+					$('#Warning').html("<p id='red_msg'>Password must be between 7 to 15 characters which contain at least one numeric digit and a special character.</p>");
+					return false;		
+				}			
+				if(password != Password2){
+					$('#Warning').html("<p id='red_msg'>Please type the same password in second field</p>");
+						return false; 
+				}
 			
-	                $.ajax({
+                $.ajax({
 					type: "POST",  
                     url: "Create_Password.php",
-					data: {Password:Password, Email:Email},  
-                    success: function(callback){  
-                        alert("We update your password succesfuly"); 
-						window.location.href = "../index.php";
+					data: { password:password, Email:Email},  
+                    success: function(callback){ 
+                    	if(callback){
+                    		alert("Your password has been successfully updated");
+                    		window.location.href = "../index.php";
+                    	}else {
+                    		alert("We can't update your password right now, please contact Us.");
+                    		window.location.href = "../AboutUS.php";
+                    	}
                     },
 					error: function (){  
 					$("#Block").html("Error, Sorry you can't register this time. Please try again.");
 					}
-					
-                }); 
+            	}); 
 			 
-	});
-			
-		   
+			});	
 		});
     </script>
 </head>

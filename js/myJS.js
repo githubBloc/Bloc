@@ -2,12 +2,9 @@
 
 $(document).ready(function(e) {
 	
-var distance = $('#Search_Fields').offset().top;
-
-	
+var distance = $('#Search_Fields').offset().top;	
 $(window).scroll(function(e){
-	
-	
+		
 	var Search_Fields = $('#Search_Fields');
 	var Register_links_2 = $('#Register_links_2');
 	var Register_links_3 = $('#Register_links_3'); 
@@ -28,14 +25,6 @@ $(window).scroll(function(e){
 	}
 	
 	});
-	
-	//Advertise Slider
-	
-  $(window).load(function() {
-    $('.flexslider').flexslider();
-	animation:"slide"
-	
-  });
   
    $('#Search_Button_li').click(function (){
 	  

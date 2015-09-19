@@ -1,22 +1,23 @@
 <?php
-$Login = $_POST['username'];
-$Password = $_POST['password'];
+$Login = trim($_POST["username"]);
+$Password = trim($_POST["password"]);
+$localhost = 'localhost';
+$Bloc = "Bloc";
 
 if(!$Login==TRUE || !$Password==TRUE)
 	{
-	echo "You Forgot input Email or Password"; exit;
+	echo "You Forgot to Enter Email or Password"; exit;
 	}
 	
-	$db = mysql_connect ("localhost","Eugene","12345");
-	mysql_select_db ("Bloc",$db);
+require_once("DB_connections.php"); 
+$bdd = new DB_connections($localhost, $Bloc, 'root', 'root');
+$User = $bdd->getOne('SELECT * FROM users WHERE Email=:parameter', $Login);  	
 	
-	$results = mysql_query("SELECT * FROM users WHERE Email='$Login'",$db);
-	$MyRow = mysql_fetch_assoc($results);
-	if(!$MyRow==TRUE){echo "1"; exit;}
+	if(!$User==TRUE){echo "1"; exit;}
 	
-	$Salt = $MyRow['Salt'];
-	$HashPass = $MyRow['Password'];
-	$CheckActive = $MyRow['Activation'];
+	$Salt = $User['Salt'];
+	$HashPass = $User['Password'];
+	$CheckActive = $User['Activation'];
 	
 	if(crypt($Password,$Salt)!==$HashPass){echo "2"; exit;}
 	if($CheckActive!=='1'){echo "3"; exit;}
@@ -24,7 +25,7 @@ if(!$Login==TRUE || !$Password==TRUE)
 	//start session
 	
 	session_start();
-	$_SESSION['Email']=$MyRow['Email'];
+	$_SESSION['Email']=$User['Email'];
 
-mysql_close($db);
+$bdd->disconnect();
 ?>

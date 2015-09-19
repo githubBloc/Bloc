@@ -15,7 +15,7 @@
                         	<p style="margin-top:10px">Password:</p><span style="color:#e74c3c; display:none;" id="Password_span">Forgot your password</span>
                             <input name="Password" value="" id="Password" type="password" size="27">
                     		<input type="submit" id="Submit_Login" name="submit" value="Submit" style="font-size:10px; margin-top:5px;">
-                            </form>
+                        </form>
                             <div id="Forgot_Password_Div">
                             <p>Please provide your email below:</p>
                             <span style="color:#e74c3c;">Invalid Email Address</span>

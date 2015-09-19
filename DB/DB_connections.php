@@ -51,8 +51,9 @@ class DB_connections {
 		}
 	}
 	
-	function getOne($query) {
+	function getOne($query,$parameters) {
 		$result = $this->conn->prepare($query);
+		$result->bindParam(':parameter', $parameters, PDO::PARAM_STR);
 		$ret = $result->execute();
 		if (!$ret) {
 		   echo 'PDO::errorInfo():';
@@ -81,14 +82,16 @@ class DB_connections {
 		return $reponse;
 	}
 	
-	function execute($query) {
-		if (!$response = $this->conn->exec($query)) {
-			echo 'PDO::errorInfo():';
-		   echo '<br />';
-		   echo 'error SQL: '.$query;
+	function execute($query, $username, $password) {
+		$statement = $this->conn->prepare($query);
+ 		$statement->bindValue(":Password", $password);
+ 		$statement->bindValue(":Email", $username);
+
+		if (!$result = $statement->execute()) {
+			echo 'PDO::errorInfo();';
 		   die();
 		}
-		return $response;
+		return $result;
 	}
 }
 
