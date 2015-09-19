@@ -1,32 +1,23 @@
 <?php
+
 session_start();
 if(!isset($_SESSION['Admin']))
 {session_unset(); session_destroy();  header('Location: index.php');}
 
-$db = mysql_connect("localhost","Eugene","12345") or die("could not connect to a database")or die(mysql_error());
-mysql_select_db("Adminka",$db) or die(mysql_error());
+require_once("../DB/DB_connections.php"); 
+$bdd = new DB_connections('localhost', 'Adminka', 'root', 'root');
 
-$counter = 0;
-$results = mysql_query("SELECT id FROM Business_Requests");
-while($row = mysql_fetch_array($results))
-{
-	$counter++;
-}
+$Users = $bdd->getAll('SELECT id FROM Business_Requests'); // select ALL from Requests   
+$counter = count($Users); // return the number of lines
 
-$counter2 = 0;
-$results = mysql_query("SELECT id FROM Claim_Requests");
-while($row = mysql_fetch_array($results))
-{
-	$counter2++;
-}
+$Users = $bdd->getAll('SELECT id FROM Claim_Requests'); // select ALL from Requests   
+$counter2 = count($Users);
 
-$counter3 = 0;
-$results = mysql_query("SELECT id FROM Hold_Requests");
-while($row = mysql_fetch_array($results))
-{
-	$counter3++;
-}
+$Users = $bdd->getAll('SELECT id FROM Hold_Requests'); // select ALL from Requests   
+$counter3 = count($Users);
+
 ?>
+
 <!doctype html>
 <html>
 <head>
@@ -42,7 +33,7 @@ while($row = mysql_fetch_array($results))
     <div id="wrapper">
     	<div id="header"><p style="text-align:left; float:left;">Admin: <?php echo $_SESSION['Admin']; ?></p><a href="LogOut.php">Log Out</a></div>
 		
-        <div id="Left_Sidebar">
+        <div id="Left_Sidebar" class="menu_links">
         	<ul>
             	<li><a id="BizRequest" href="#">Business Request's <b style="color:#e74c3c; font-size:16px;"><?php echo $counter; ?></b></a></li>
                 <li><a id="ClaimRequest" href="#">Claim Request's <b style="color:#e74c3c; font-size:16px;"><?php echo $counter2; ?></b></a></li>
@@ -60,4 +51,4 @@ while($row = mysql_fetch_array($results))
 
 </body>
 </html>
-<?php mysql_close($db);?>
+<?php $bdd->disconnect();?>

@@ -1,28 +1,28 @@
 <?php
-$username = $_POST["Username"];
-$password = $_POST["Password"];
 
+$username = trim($_POST["Username"]);
+$password = trim($_POST["Password"]);
+$localhost = 'localhost';
+$Adminka = "Adminka";
 
-$db = mysql_connect ("localhost","Eugene","12345");
-mysql_select_db ("Adminka",$db);
+require_once("../../DB/DB_connections.php"); 
+$bdd = new DB_connections($localhost, $Adminka, $username, $password);
 
-$results = mysql_query("SELECT * FROM users WHERE Username='$username'");
-$row = mysql_fetch_array($results);
+$User = $bdd->getOne('SELECT * FROM users WHERE Username="root"');  
 
-$pass = $row['Password'];
-$salt = '$2y$11$' . substr(md5($username), 0, 22); 
+	$pass = $User['Password'];
+	$salt = '$2y$11$' . substr(md5($username), 0, 22); 
 
+	if(crypt($password,$salt)==$pass){
 
+		header("Location: ../MainPage.php");
+		session_start();
+	    $_SESSION['Admin'] = $username;
+    
+    } else {
 
-if(crypt($password,$salt)==$pass)
-{
-	header("Location: ../MainPage.php");
-	
-	session_start();
-    $_SESSION['Admin'] = $username;
-}
-else{ echo "Your login or password is not correct";}
+		echo "Your login or password is not correct";
+	}
 
-
-mysql_close($db);
+$bdd->disconnect();
 ?>

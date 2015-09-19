@@ -1,47 +1,16 @@
 // JavaScript Document
 
 $(document).ready(function(){ 
-
-$('#BizRequest').click(function (e){
-	
-	e.preventDefault();
-	
-                $.ajax({  
-                    url: "BizRequest/LoadList.php",  
-                    cache: false,  
-                    success: function(html){  
-	
-                        $("#Content").html(html);  
-                    }  
-      }); // end of Ajax 
-});// end of BizRequest function
-
-$('#HoldRequest').click(function (e){
-	
-	e.preventDefault();
-	
-                $.ajax({  
-                    url: "Hold/LoadList.php",  
-                    cache: false,  
-                    success: function(html){  
-	
-                        $("#Content").html(html);  
-                    }  
-      }); // end of Ajax 
-});// end of HoldRequest function
-
-$('#ClaimRequest').click(function (e){
-	
-	e.preventDefault();
-                $.ajax({  
-                    url: "ClaimRequest/LoadList.php",  
-                    cache: false,  
-                    success: function(html){  
-	
-                        $("#Content").html(html);  
-                    }  
-      }); // end of Ajax 
-});// end of HoldRequest function
+	$('.menu_links a').click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url:this.id+'/LoadList.php',
+			cache:false,
+			success: function(callback_body){
+				$('#Content').html(callback_body);
+			}
+		});
+	});
 
 $(document).on('click', '#ProfileLink', function (e) {
     e.preventDefault();
