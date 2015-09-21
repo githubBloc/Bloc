@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Register</title>
-<script type="text/javascript" src="js/Timeout.js"></script>
 <style type="text/css">
 p {color:#565656;font-family:"Gotham Rounded Book";font-size:14px;text-transform:uppercase;margin:5px 0px;}
 #Loader {width:88px;height:76px;border:1px solid #565656;}
@@ -57,6 +56,7 @@ $(document).ready(function(){
 <br>
 <a href="../BackOffice.php">Confirm</a>
 
+<script type="text/javascript" src="js/Timeout.js"></script>
 </body>
 </html>
 

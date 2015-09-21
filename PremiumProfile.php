@@ -26,9 +26,6 @@ $CounterResults = mysql_query("UPDATE BizInfo SET ClickTrueRate = ClickTrueRate 
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNLgi1Z5IZHLK5EwOuAzd99vxJoyB-IfI"></script>
-
-<script type="text/javascript" src="js/Timeout.js"></script>
-<script type="text/javascript" src="js/LoginPassword.js"></script>
 <script type="text/javascript">
 
 $(window).ready(function() {
@@ -329,5 +326,8 @@ mysql_close($db);
 ?>
 
 </div>
+
+<script type="text/javascript" src="js/Timeout.js"></script>
+<script type="text/javascript" src="js/LoginPassword.js"></script>
 </body>
 </html>

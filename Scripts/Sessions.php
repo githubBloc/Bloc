@@ -1,10 +1,15 @@
 <?php session_start();
 if(isset($_SESSION['Email'])){
-$Email=$_SESSION['Email'];
-$db = mysql_connect ("localhost","Eugene","12345");
-mysql_select_db ("Bloc",$db);
-$results = mysql_query("SELECT FirstName FROM users WHERE Email = '$Email'", $db);
-$myrow = mysql_fetch_array($results);
-$FirstName = $myrow['FirstName'];}
+	$Email=trim($_SESSION['Email']);
+	$localhost = "localhost";
+	$Bloc = "Bloc";
+
+	require_once('../DB/DB_connections.php');
+	$bdd = new DB_connections($localhost, $Bloc, 'root', 'root');
+	$query = 'SELECT FirstName, Activation FROM users WHERE Email =:parameter';
+	$User = $bdd -> getOne($query, $Email);
+
+	$FirstName = ($User['Activation']==1) ? $User['FirstName'] : NULL;	
+}
 
 ?>

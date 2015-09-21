@@ -7,9 +7,6 @@
 <link href="CSS/css_styles.css" type="text/css" rel="stylesheet">
 <link href="CSS/Register.css" type="text/css" rel="stylesheet">
  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/Timeout.js"></script>
-<script type="text/javascript" src="js/LoginPassword.js"></script>
-
 </head>
 
 <body>
@@ -81,5 +78,7 @@ $('#Submit_Login3').click(function (e) {
 <!--Copyright-->	
 <?php include("Blocks/Copyright.php"); ?>
 </div>
+<script type="text/javascript" src="js/Timeout.js"></script>
+<script type="text/javascript" src="js/LoginPassword.js"></script>
 </body>
 </html>

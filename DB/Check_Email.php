@@ -1,14 +1,15 @@
 <?php
+$localhost = 'localhost';
 
-if(isset($_POST["email"]))
-{
-	include ("../DB/bd.php");
+if(isset($_POST["email"])){
+
 	$email=$_POST["email"];
-	
-	$results = mysql_query("SELECT id FROM users WHERE Email='$email'",$db);
-	$email_exist=mysql_num_rows($results);
-	
-	if($email_exist)
+	require_once("DB_connections.php"); 
+	$bdd = new DB_connections($localhost, 'Bloc', 'root', 'root');
+	$User = $bdd->getOne('SELECT id FROM users WHERE Email=:parameter', $email);  
+	$bdd->disconnect();
+
+	if($User['id']>0)
 		{
 		die("<p id='red_msg'>Username is exist already. Please re-enter a new email address.</p>");
 		} 
@@ -19,5 +20,4 @@ if(isset($_POST["email"]))
 	else { die ("<p id='green_msg'>Username is available</p>");}
 }
 
-mysql_close($db);
 ?>

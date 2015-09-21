@@ -6,15 +6,17 @@ $Password = stripslashes($Password); $Password = htmlspecialchars($Password); $P
 	
 $Salt = '$2y$11$' . substr(md5($Email), 0, 22); 	
 $HashPassword = crypt($Password,$Salt);
+$Parameters = array(
+	':Password' => $HashPassword,
+	':Email' => $Email,
+	);
 
 require_once("../DB/DB_connections.php"); 
 $bdd = new DB_connections($localhost, 'Bloc', 'root', 'root');
 
-$sql = "UPDATE `users`   
-   		SET `Password` = :Password
- 		WHERE `Email` = :Email";
+$sql = "UPDATE `users` SET `Password` = :Password WHERE `Email` = :Email";
 
-$bdd->execute($sql, $Email, $HashPassword);
-echo $bdd;
-
+$results = $bdd->execute($sql, $Parameters);
+echo $results;
+$bdd->disconnect();
 ?>	

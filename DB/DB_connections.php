@@ -82,10 +82,11 @@ class DB_connections {
 		return $reponse;
 	}
 	
-	function execute($query, $username, $password) {
+	function execute($query, $Parameters) {
 		$statement = $this->conn->prepare($query);
- 		$statement->bindValue(":Password", $password);
- 		$statement->bindValue(":Email", $username);
+			foreach ($Parameters as $key => $value) {
+				$statement->bindValue($key, $value, PDO::PARAM_STR);
+			}
 
 		if (!$result = $statement->execute()) {
 			echo 'PDO::errorInfo();';

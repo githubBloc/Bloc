@@ -12,7 +12,8 @@ if(!$Login==TRUE || !$Password==TRUE)
 require_once("DB_connections.php"); 
 $bdd = new DB_connections($localhost, $Bloc, 'root', 'root');
 $User = $bdd->getOne('SELECT * FROM users WHERE Email=:parameter', $Login);  	
-	
+$bdd->disconnect();	
+
 	if(!$User==TRUE){echo "1"; exit;}
 	
 	$Salt = $User['Salt'];
@@ -27,5 +28,5 @@ $User = $bdd->getOne('SELECT * FROM users WHERE Email=:parameter', $Login);
 	session_start();
 	$_SESSION['Email']=$User['Email'];
 
-$bdd->disconnect();
+
 ?>

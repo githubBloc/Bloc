@@ -5,12 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Bloc</title>
 <link href="CSS/css_styles.css" type="text/css" rel="stylesheet">
-<link href="CSS/flexslider.css" type="text/css" rel="stylesheet">
-<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-<script type="application/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/myJS.js"></script>
-<script type="text/javascript" src="js/LoginPassword.js"></script>
-<script type="text/javascript" src="js/Timeout.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -40,5 +35,8 @@ include("Blocks/Copyright.php");
 
 ?>
 </div>
+<script type="text/javascript" src="js/Timeout.js"></script>
+<script type="text/javascript" src="js/myJS.js"></script>
+<script type="text/javascript" src="js/LoginPassword.js"></script>
 </body>
 </html>

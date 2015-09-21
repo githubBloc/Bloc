@@ -10,9 +10,6 @@ $FirstName = $myrow['FirstName'];}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Register</title>
-
 <style type="text/css">
 p {color:#565656;font-family:"Gotham Rounded Book";font-size:11px;text-transform:uppercase;margin:5px 0px;}
 input:last-child {margin-top:5px;}
@@ -20,7 +17,9 @@ input:last-child {margin-top:5px;}
 #green_msg{color:green; font-family:"Gotham Rounded Bold";}
 #Star {color:red;}
 </style>
-<script type="text/javascript" src="js/Timeout.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Register</title>
 </head>
 
 <body>
@@ -85,7 +84,7 @@ input:last-child {margin-top:5px;}
 			 $('#Pwd').blur(function() {
 				  var Pwd = $(this).val();
 				  var result = false;
-				var reg_exp=  /^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+				var reg_exp=  /^^(?=.*[0-9])(?=.*[!@#$%^&*\-\(\)\[\]\{\}+_=])[a-zA-Z0-9!@#$%^&*\-\(\)\[\]\{\}+_=]{7,15}$/;
 			  if(!reg_exp.test(Pwd))
 				{
 					$('#Check_pwd').html("<p id='red_msg'>Password must be between 7 to 15 characters which contain at least one numeric digit and a special character.</p>");
@@ -164,7 +163,7 @@ input:last-child {margin-top:5px;}
 			
 			});  
 </script>
-
+<script type="text/javascript" src="js/Timeout.js"></script>
         
 </body>
 </html>

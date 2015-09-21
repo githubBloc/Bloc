@@ -5,11 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Bloc</title>
 <link href="CSS/AboutUS.css" type="text/css" rel="stylesheet">
-<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-<script type="application/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/myJS.js"></script>
-<script type="text/javascript" src="js/LoginPassword.js"></script>
-<script type="text/javascript" src="js/Timeout.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -82,42 +78,6 @@ include("Blocks/Header.php");
 			What’s more, good stories are sticky -- which means people are more likely to connect with them and pass them on.</h3>
     </div>
 
-
-<!-- Contact US Block -->
-	
-<div id="Contact_US"> 
-
-	<div id="Contact_US_Text">
-		<h2>CONTACT US</h2>
-
-		<h3>NEED TO GET IN TOUCH? </br>
-			CALL US AT <strong> (888) 888-8888 </strong> OR FILL OUT THE CONTACT FORM.</h3>
-	</div>
-
-		<div id="Contact_US_Form">
-			<div id="Your_Name" style="float:left; margin-right: 35px;">
-				<label>YOUR NAME</label></br>
-				<input type="text">
-			</div>
-
-			<div id="Your_Email">
-				<label>YOUR E-MAIL</label></br>
-				<input type="text">
-			</div>
-
-			<div id="Message" style="margin-top:20px;">
-				<label>MESSAGE</label></br>
-				<input type="textarea" style="width:100%; height:250px;">
-			</div>
-
-			<a href="Contact_US_Form"><div id="Contact_US_Form_Button"><p>SEND</p></div></a>
-				
-			<div style="clear:both;"></div>
-
-		</div>
-
-</div>
-
 <?php
 
 include("Blocks/Footer.php");
@@ -126,5 +86,8 @@ include("Blocks/Copyright.php");
 
 ?>
 </div>
+<script type="text/javascript" src="js/myJS.js"></script>
+<script type="text/javascript" src="js/LoginPassword.js"></script>
+<script type="text/javascript" src="js/Timeout.js"></script>
 </body>
 </html>

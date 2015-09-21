@@ -40,7 +40,7 @@ $Email = $_GET['Email'];
                     url: "Create_Password.php",
 					data: { password:password, Email:Email},  
                     success: function(callback){ 
-                    	if(callback){
+                    	if(callback == true){
                     		alert("Your password has been successfully updated");
                     		window.location.href = "../index.php";
                     	}else {

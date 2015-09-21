@@ -54,6 +54,8 @@ body
 	margin:0px auto 2px auto;
 }
 
+#AboutUS_Nav {color:#e74c3c !important;}
+
 #header 
 {
 	height:65px;
@@ -298,53 +300,6 @@ a {text-align:center; text-decoration:none; font-family:"Gotham Rounded Medium";
 			
 		}
 
-/*Contact US block*/
-		#Contact_US { padding: 35px 60px; }
-
-		#Contact_US_Text { text-align: center; color: #565656;}
-
-		#Contact_US_Text h2 {  
-			margin-top: 0px;
-  			font-size: 23px;
-  			font-family: "Gotham Rounded Medium"
-	  	}
-	  	#Contact_US_Text h3 {  
-  			font-size: 22px;
-  			font-family: "Gotham Rounded Light";
-  			color: #858585;
-	  	}
-	  	#Contact_US_Text h3 strong {color: #e74c3c;}
-
-	  	#Contact_US_Form {  padding: 0px 79px;}
-
-	  	#Contact_US_Form label {
-	  		font-size: 14px;
-	  		font-family: "Gotham Rounded Book";
-	  		color: #858585;
-	  	}
-	  	#Contact_US_Form input {
-	  		margin-top: 5px;
-	  		background-color: #ECECEC;
-	  		border: 1px solid #858585;
-	  		height: 45px;
-  			width: 385px;
-	  	}
-	  	#Contact_US_Form_Button {
-	  		height: 60px;
-  			border: 2px solid #e74c3c;
-  			width: 200px;
-  			float:right;
-  			margin: 25px -2px 0px 0px;
-	  	}
-	  	#Contact_US_Form_Button p {
-	  		font-size: 18px;
-  			font-family: "Gotham Rounded Medium";
- 			 color: #e74c3c;
-  			text-align: center;
-  			margin-top: 19px;
-	  	}
-	  	#Contact_US_Form a:hover #Contact_US_Form_Button {background-color: #e74c3c;}
-	  	#Contact_US_Form a:hover #Contact_US_Form_Button p {color: #fff;}
 /*Footer*/
 		#Footer
 		{
@@ -352,6 +307,7 @@ a {text-align:center; text-decoration:none; font-family:"Gotham Rounded Medium";
 			background-color:#868686;
 			color:#e7eced;
 			padding: 35px 60px 35px 60px;
+			margin-top: 40px;
 		}
 		#Footer h4 {
 			font-family: "Gotham Rounded Medium";

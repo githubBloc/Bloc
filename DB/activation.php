@@ -1,38 +1,40 @@
 <?php session_start();
-$_SESSION['Email'] = $_GET['Email']; 
+$Email = trim($_GET['Email']); 
+$Bloc = 'Bloc';
+$localhost = 'localhost';
+$Parameters =  array(
+		':Activation' => 1,
+		':Email' => $Email
+	);
 
+if(isset($_GET['code']) && isset($_GET['Email'])) {
+	$code =$_GET['code'];
+	$Email=$_GET['Email']; 
+} else {
+	exit("You are trying to log in without conformation of your registration.<br><a href='../index.php'>Bloc</a>");	 
+	} 
 
-if    (isset($_GET['code'])) {$code =$_GET['code']; } 
-            else 
-            {
-				
-			  exit("You logged in this page without conformation code<br><a href='../index.php'>Bloc</a>");	 
-			 } 
- if (isset($_GET['Email'])) {$Email=$_GET['Email'];}
-            else 
-            {    
-			exit("You got on this page without email<a href='../index.php'>Bloc</a><br>");
-			} 
-			
-			include ("../DB/bd.php");
+require_once('DB_connections.php');
+$bdd = new DB_connections($localhost, $Bloc, 'root', 'root');
+$query = 'SELECT id, Activation FROM users WHERE Email =:parameter';
+$User = $bdd -> getOne($query, $Email);
 
- $results1 = mysql_query("SELECT * FROM users WHERE Email = '$Email'", $db);
-		$myrow1 = mysql_fetch_array($results1);
-		
-		$Kill_Link = $myrow1['Activation'];
-		if($Kill_Link=='1'){exit("You did confirm your Registration already");}
-		$activation = md5($myrow1['id']).md5($Email);
-	
- if ($activation == $code) {
-                     mysql_query("UPDATE users SET Activation='1' WHERE Email='$Email'",$db);
-                     
-					     			
-        header('Location: ../BackOffice.php');            
-		 
-                     }
-            else {
-				exit("Error, your confirmation email does not match our database<a href='../index.php'>Bloc</a><br>");
-            } 
+$Kill_Link = $User['Activation'];
+		if($Kill_Link=='1'){
+			exit("You did confirm your Registration already");
+		}
+$activation = md5($User['id']).md5($Email);	
 
-mysql_close($db);
+	if ($activation == $code) {
+		$update_query = "UPDATE users SET Activation =:Activation WHERE Email =:Email";
+		$bdd = new DB_connections($localhost, $Bloc, 'root', 'root');
+		$bdd->execute($update_query, $Parameters);
+		$bdd->disconnect();
+		$_SESSION['Email'] = $Email;
+
+	    header('Location: ../BackOffice.php');            	 
+	} else {
+		exit("Error, your confirmation email does not match our database <br> <p>Home Page: <a href='../index.php'>Bloc</a></p>".$activation.'<br/>'.$code);
+	  } 
+
 ?>
